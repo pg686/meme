@@ -1,5 +1,6 @@
 
 @import "navbar.css";
+@import "home.css";
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -19,7 +20,7 @@ html{
 }
 
 body {
-  font-family: "Indie Flower", cursive;
+  font-family:  "Slackey", sans-serif;
   font-size: 20px;
   line-height: 1.42857143;
   background-color: #fff;
@@ -47,7 +48,7 @@ p {
   font-family: "Ubuntu Mono", monospace !important;
 }
 :root {
-    --first-color: green;
+    --first-color: #FFC72C;
     --first-color-alt: hsl(19, 64%, 52%);
     --font-medium: 500;
   --theme-primary: #FFD060;
@@ -72,10 +73,12 @@ a{
 .button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     column-gap: .5rem;
     background-color: var(--first-color);
     padding: 1rem 1.5rem;
    border-radius: 4rem;
+   z-index: 20;
    color: #fff;
    font-weight: var(--font-medium);
    }
@@ -93,3 +96,98 @@ a{
    .button:hover i{
        transform: translateX(.25rem);
    }
+
+
+   .test{ 
+    height: 10000px;
+    background-color: #DA291C;
+    color: transparent;
+   }
+
+
+   
+
+.ngmi {
+  width: 100%;
+    height: 100%;
+    background-color: #DA291C;
+    color: #fff;
+    max-width: 100%;
+}
+.wagmi {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  color: #fff;
+  max-width: 100%;
+  
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.box li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  animation: animate 10s ease-in infinite;
+  bottom: -150px;
+opacity: 0.7;
+}
+
+.box li:nth-child(1){
+  left: 86%;
+  animation-delay: 0s;
+}
+.box li:nth-child(2){
+  left: 11%;
+  animation-delay: 3s;
+}
+.box li:nth-child(3){
+  left: 70%;
+  animation-delay: 6s;
+}
+.box li:nth-child(4){
+  left: 45%;
+  animation-delay: 3.5s;
+}
+.box li:nth-child(5){
+  left: 65%;
+  animation-delay: 4.7s;
+}
+.box li:nth-child(6){
+  left: 15%;
+  animation-delay: 1.3s;
+}
+.box li:nth-child(7){
+  left: 30%;
+  animation-delay: 4s;
+}
+.box li:nth-child(8){
+  left: 20%;
+  animation-delay: 5s;
+}
+.box li:nth-child(9){
+  left: 88%;
+  animation-delay: 3.8s;
+}
+.box li:nth-child(10){
+  left: 15%;
+  animation-delay: 7s;
+}
+@keyframes animate  {
+  0%{
+    transform: translateY(0) scale(0.3);
+  }
+  100%{
+    transform:  translateY(-2000px) scale(0.4);
+  }
+}

@@ -1,0 +1,110 @@
+
+.homeContainer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    padding: 3rem 12%;
+    background-color: transparent;
+}
+.homeImg {
+    height: auto;
+    width: 100%;
+    
+}
+.homeImgSpan{
+    flex: 1;
+}
+
+.wojakSection{
+    display: flex;
+    flex: 4;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.homeInfo {
+    display: flex;
+    flex: 3;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.homeButtons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 2;
+
+}
+.wrapperSlider{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    padding: 3rem 12%;
+}
+
+.slider {
+  height: 250px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background-color: transparent;
+
+} 
+
+.slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+}
+
+
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 9));
+    }
+}
+.slider img {
+    width: 100%;
+    transition: transform 1s;
+}
+
+.slider::before,
+.slider::after {
+    background-color: white;
+    content: '';
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
